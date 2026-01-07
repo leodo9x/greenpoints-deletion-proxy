@@ -3,14 +3,15 @@
 	"main": "src/index.ts",
 	"name": "gp-deletion-proxy",
 	"upload_source_maps": true,
-	"d1_databases": [
-		{
-			"binding": "DB",
-			"database_id": "29f37d4a-3fae-4478-9173-81a20ac6caa0",
-			"database_name": "gp-dev"
-		}
-	],
 	"observability": {
 		"enabled": true
-	}
+	},
+    "env": {
+        "prd": {
+      "name": "gp-deletion-proxy",
+      "vars": {
+        "CORS_ALLOW_ORIGIN": "https://greenpoints.greenconnect.vn"
+      }
+    }
+    }
 }
